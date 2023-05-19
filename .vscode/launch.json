@@ -1,0 +1,83 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'pratt'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=pratt",
+                    "--package=minipratt"
+                ],
+                "filter": {
+                    "name": "pratt",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'pratt'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=pratt",
+                    "--package=minipratt"
+                ],
+                "filter": {
+                    "name": "pratt",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'shunting-yard'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=shunting-yard",
+                    "--package=minipratt"
+                ],
+                "filter": {
+                    "name": "shunting-yard",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'shunting-yard'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=shunting-yard",
+                    "--package=minipratt"
+                ],
+                "filter": {
+                    "name": "shunting-yard",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
